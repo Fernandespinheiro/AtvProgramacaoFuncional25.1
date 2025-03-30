@@ -1,9 +1,30 @@
 from statistics import mean
 
+print("bem vindo! Está com duvida em qual produto escolher?")
+input("vamos te ajudar! insira 3 produtos dos quais você precisa a seguir")
 
-produtos = [{"nome":"hidratante","avaliacoes":[2,3,2,1]},
-            {"nome":"sabonete","avaliacoes":[5,4,5,5]},
-            {"nome":"shampoo","avaliacoes":[4,4,5,5]}] #criando uma tabela de produtos
+nomeDoProduto1= input("digite o nome do seu produto 1: ")
+n = int(input('Digite a quantidade de Avaliações : '))
+valores1 = list()
+for c in range(1, n + 1):
+    x = int(input(f'Digite o {c}ª valor de 1 a 5: '))
+    valores1.append(x)
+nomeDoProduto2= input("digite o nome do seu produto 2: ")
+y = int(input('Digite a quantidade de Avaliações : '))
+valores2 = list()
+for c in range(1, y + 1):
+    x = int(input(f'Digite o {c}ª valor de 1 a 5: '))
+    valores2.append(x)
+nomeDoProduto3= input("digite o nome do seu produto 3: ")
+z = int(input('Digite a quantidade de Avaliações : '))
+valores3 = list()
+for c in range(1, z + 1):
+    x = int(input(f'Digite o {c}ª valor de 1 a 5: '))
+    valores3.append(x)
+
+produtos = [{"nome":nomeDoProduto1,"avaliacoes":valores1},
+            {"nome":nomeDoProduto2,"avaliacoes":valores2},
+            {"nome":nomeDoProduto3,"avaliacoes":valores3}] #criando uma tabela de produtos
 
 produtoMedia =[{"media": mean(produto["avaliacoes"]),'nome':produto['nome']}for produto in produtos ] #fazendo a media
 
